@@ -3,23 +3,101 @@
 
 <head>
     <!-- TODO: Include Font Awesome file here -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <link href='../styles/common.css' rel='stylesheet' type='text/css'>
+    <link href='../styles/postlist.css' rel='stylesheet' type='text/css'>
+
+
+
+    <title>ScriBBler</title>
+
 </head>
 
 <body>
 <!-- TODO: Include code for header here -->
+<script src="../scripts/common.js"></script>
+<div id="main-container-div">
+
+    <div class="header">
+        <div class="title-container">
+            <p class="title">ScriBBler</p>
+            <p class="sub-title">Explore, Imagine, Create</p>
+        </div>
+
+        <div class="login-buttons-container">
+            <button onclick="showSignInModal()" class="blue-button" type="button">Sign In</button>
+            <button onclick="showSignUpModal()" class="blue-button" type="button">Sign Up</button>
+        </div>
+
+    </div>
+
+</div>
+
+<div>
+    <!-- Insert code for Sign In modal here -->
+    <div class="modal" id="signin-modal">
+        <div class="modal-content">
+
+            <div class="modal-head">
+                <span onclick="hideSignInModal()" id="close" class="close">&times;</span>
+                <h2 class="modal-title">Welcome Back!</h2>
+            </div>
+            <hr>
+            <form>
+                <label for="username" class="label-text">Username</label>
+                <input type="text" id="username" placeholder="Enter Username" required>
+                <label for="password" class="label-text">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <button type="submit" onclick="signin(username, password)" class="signin-btn">Sign In</button>
+            </form>
+
+            <p class="bottom-banner">Not a member?<span onclick="hideSignInModal();showSignUpModal()" class=signup>Sign Up</span></p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Insert code for Sign Up modal here -->
+<div>
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+
+            <div class="modal-head">
+                <span onclick="hideSignUpModal()" id="close" class="close">&times;</span>
+                <h2 class="modal-title">Get Started</h2>
+            </div>
+            <hr>
+            <form>
+                <label for="fullname" class="label-text">Full name</label>
+                <input type="text" id="fullname" placeholder="Enter Full Name" required>
+                <label for="username" class="label-text">Username</label>
+                <input type="text" id="username" placeholder="Enter Username" required>
+                <label for="password" class="label-text">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+                <label for="confirmpassword" class="label-text">Confirm Password</label>
+                <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+                <button type="submit" onclick="signup(firstName,lastName, email, password, mobile)" class="signin-btn">Sign up</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
 
 <!-- list of all posts starts here -->
 <div>
-
     <!-- post 1 starts here -->
     <div>
         <div>
             <p>Srishti Gupta</p>
         </div>
-
         <div>
             <div>
                 <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
@@ -27,22 +105,18 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
             </div>
-            <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a
-                variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same
-                purpose, they are different.</p>
+            <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
             <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 </span>
         </div>
     </div>
     <!-- post 1 ends here -->
-
     <!-- post 2 starts here -->
     <div>
         <div>
             <p>Colby Fayock</p>
         </div>
-
         <div>
             <div>
                 <p>What is linting and how can it save you time?</p>
@@ -50,21 +124,18 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
             </div>
-            <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more
-                of, but linting can help us make the most out of the time we have.</p>
+            <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
             <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 </span>
         </div>
     </div>
     <!-- post 2 ends here -->
-
     <!-- post 3 starts here -->
     <div>
         <div>
             <p>Yazeed Bzadough</p>
         </div>
-
         <div>
             <div>
                 <p>How to Get More Views on Your Tech Blog</p>
@@ -72,22 +143,18 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
             </div>
-            <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog,
-                YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in
-                the industry.</p>
+            <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
             <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
                 </span>
         </div>
     </div>
     <!-- post 3 ends here -->
-
     <!-- post 4 starts here -->
     <div>
         <div>
             <p>Cedd Burge</p>
         </div>
-
         <div>
             <div>
                 <p>How to write easily describable code</p>
@@ -95,9 +162,7 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
             </div>
-            <p>When code is not describable using words, most people have to do some mental mapping to turn it in to
-                words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people
-                will map to different words, which
+            <p>When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
                 leads to confusion when discussing the code.</p>
             <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
@@ -105,13 +170,11 @@
         </div>
     </div>
     <!-- post 4 ends here -->
-
     <!-- post 5 starts here -->
     <div>
         <div>
             <p>Srishti Gupta</p>
         </div>
-
         <div>
             <div>
                 <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
@@ -119,9 +182,7 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
             </div>
-            <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing
-                some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say
-                that you’ve created a module
+            <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
                 named xyz.</p>
             <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
@@ -129,9 +190,7 @@
         </div>
     </div>
     <!-- post 5 ends here -->
-
     <!-- TODO: Write code for delete post modal here -->
-
 </div>
 <!-- list of all posts ends here -->
 </body>
