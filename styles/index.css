@@ -1,66 +1,28 @@
-html{
-    height: 100%;
-    width:100%;
+body {
+    background-image: url('../images/background.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
-body{
-    background: url('../images/background.jpg') no-repeat fixed center center;
-    background-size: cover;
-    margin: 0 !important;
-    background-size: 100%;
-    overflow:hidden;
-    display: block;
-    height: 100%;
-}
-
-#main-container-div{
+.posts {
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
-}
-
-.postButtons{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
 }
 
-.yellow-button{
-    background-color: yellow;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 18px;
-    padding-left:18px;
-    color:black;
-    font-family: 'Ubuntu Condensed';
-    font-size: 16px;
-    margin-left: 10px;
-    border-radius: 4px;
+.postBtn {
+    background-color: orange;
+    width: 7em;
 }
 
-.create-btn{
-    margin-top: 10px;
-    background-color: green;
-    font-size: 14px;
-    width:100px;
+#inputContent {
+    background-color: #f2f2f2;
+}
+
+#create {
+    background-color: #53c653;
     color: white;
-    padding: 10px;
-    align-self: center;
-    font-family: Roboto;
-}
-.post-modal-content{
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-textarea{
-    margin-top: 10px;
-    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
 }

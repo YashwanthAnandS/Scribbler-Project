@@ -1,124 +1,58 @@
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 5px;
-}
-
-.title-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.title {
-    font-family: Montez, cursive;
-    font-size: 44px;
-    margin: 0px;
+.brand1 {
+    font-family: 'Montez', cursive;
+    font-weight: bolder;
+    font-size: xx-large;
     color: blue;
 }
 
-.sub-title {
-    font-family: "Ubuntu Mono", monospace;
-    font-size: 14px;
-    margin: 0px;
+.brand2 {
+    font-size: small;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
-.blue-button{
+.signin {
+    color: white;
     background-color: blue;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 18px;
-    padding-left:18px;
-    color:white;
-    font-family: 'Ubuntu Condensed';
-    font-size: 16px;
-    border-radius: 4px;
 }
 
-.login-buttons-container{
-    padding: 10px;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    justify-content: center;
-    align-items: center;
-    color: black;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input {
-    padding: 10px;
-    outline: none;
-    font-family: Roboto;
-}
-
-.label-text {
-    font-weight: bold;
-    margin: 10px 0;
-    font-family: Roboto;
-}
-
-.modal-content{
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
+#signUpModal, #signInModal {
     width: 30%;
 }
 
-.modal-head {
-    display: flex;
-    flex-direction: column;
+.modal-title {
+    font-weight: lighter;
+    font-size: x-large;
 }
 
-.close {
-    display: flex;
-    align-self: flex-end;
-    cursor: pointer;
-}
-
-.modal-title{
-    align-self: flex-start;
-    font-family: Roboto;
-}
-
-.signin-btn {
-    background-color: green;
-    padding: 10px;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    margin-top: 20px;
-    cursor: pointer;
-    font-family: Roboto;
-    border-radius: 4px;
-}
-
-.signup{
-    color: blue;
+label {
     font-weight: bolder;
-    margin-left: 10px;
-    cursor: pointer;
-    font-family: Roboto;
 }
 
-.bottom-banner{
-    font-family: Roboto;
-    align-items: center;
-    justify-content: center
+#signUp, #signIn {
+    width: 100vh;
+    background-color: #53c653;
+    color: white;
+    font-weight: bolder;
+}
+
+input[type=text], input[type=password] {
+    background-color: #f2f2f2;
+}
+
+#msg {
+    padding-top: 10px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+#msg2 {
+    color: blue;
+}
+
+form {
+    margin: 0;
+}
+
+.footer {
+    padding-bottom: 0;
 }
